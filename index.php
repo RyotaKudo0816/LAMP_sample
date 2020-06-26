@@ -88,7 +88,7 @@
                 </table>
             </div>
             <div class="tab-pane" id="insert">
-                <form action="./insert.php" method="POST">
+                <form class="mt-3" action="./insert.php" method="POST">
                     <div class="form-group row">
                         <label for="id" class="col-sm-2 col-form-label">ID</label>
                         <div class="col-sm-10">
@@ -107,10 +107,8 @@
                             <input type="text" class="form-control" id="age" name="age">
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Insert</button>
-                        </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Insert</button>
                     </div>
                 </form>
             </div>
