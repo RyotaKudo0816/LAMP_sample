@@ -1,11 +1,11 @@
 <?php
     $dsn = 'mysql:dbname=test_DB;host=localhost;';
     $user = 'ryota';
-    $password = '8Akatokage16!';
+    $password = '8akatokage16';
     try {
         $dbh = new PDO($dsn, $user, $password);
 
-        $sql = "select * from sample;";
+        $sql = "select * from user;";
         $result = $dbh->query($sql);
 
     } catch (PDOException $e) {
