@@ -7,6 +7,7 @@
 
         $sql = "select * from user;";
         $result = $dbh->query($sql);
+        $result2 = $dbh->query($sql);
 
     } catch (PDOException $e) {
         echo "Setsuzoku Sippai: " . $e->getMessage() . "\n";
@@ -138,7 +139,32 @@
                     </form>
             </div>
             <div class="tab-pane" id="delete">
-                <p>smaple tab4</p>
+                <table class="table table-hover mt-2">
+                        <caption>Show User Table</caption>
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>-</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach($result2 as $value) { ?>
+                                <tr>
+                                    <th><?php echo "$value[id]"; ?></th>
+                                    <td><?php echo "$value[name]"; ?></td>
+                                    <td><?php echo "$value[age]"; ?></td>
+                                    <td>
+                                        <form action="./delete.php" method="GET">
+                                            <input class="d-none type="text" name="id" value="<?php echo "$value[id]"; ?>">
+                                            <button class="btn btn-danger" type="submit">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
             </div>
         </div>
     </div>

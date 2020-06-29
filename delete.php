@@ -6,11 +6,13 @@
         $dbh = new PDO($dsn, $user, $password);
         $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $id = $_GET['id'];
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $age = $_POST['age'];
 
-        $sql = "delete from user where id=:id;";
+        $sql = "insert into user values (:id, :name, :age);";
         $stmt = $dbh->prepare($sql);
-        $prams = array(':id'=> $id);
+        $prams = array(':id'=> $id, ':name'=> $name, ':age'=> $age);
         $stmt->execute($prams);
 
         header('Location: index.php?fg=1');
