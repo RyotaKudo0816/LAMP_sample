@@ -108,7 +108,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Insert</button>
+                        <button type="submit" class="btn btn-primary btn-block">Insert</button>
                     </div>
                 </form>
             </div>
@@ -133,7 +133,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Update</button>
+                            <button type="submit" class="btn btn-primary btn-block">Update</button>
                         </div>
                     </form>
             </div>
